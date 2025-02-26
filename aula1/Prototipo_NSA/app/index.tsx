@@ -1,6 +1,9 @@
-import { Text, View, StyleSheet } from "react-native";
+import React from "react";
+import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
-export default function Index() {
+export default function LoginScreen() {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Text style={styles.title}>NSA</Text>
@@ -24,7 +27,7 @@ export default function Index() {
       </View>
 
       <View style={styles.button}>
-        <Text style={styles.buttonText}>ENTRAR</Text>
+        <Text style={styles.buttonText} onPress={() => navigation.navigate("home")}>ENTRAR</Text>
       </View>
 
       <View style={styles.row}>
