@@ -1,3 +1,4 @@
+//Por Carlos Santos e Kauã Gomes
 import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
 
 export default function Index() {

@@ -1,3 +1,4 @@
+//Por Carlos Santos e Kauã Gomes
 import React from "react";
 import { Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
@@ -15,14 +16,14 @@ export default function LoginScreen() {
       }}
     >
 
-      <View style={{ alignItems: "center", width: "100%"}}>
-        <Text style={{fontWeight: 'bold'}}>SELECIONE A HABILITAÇÃO</Text>
+      <View style={{ alignItems: "center", width: "100%" }}>
+        <Text style={{ fontWeight: 'bold' }}>SELECIONE A HABILITAÇÃO</Text>
         <View style={{ backgroundColor: "white", padding: 10, borderColor: 'black', borderWidth: 2, borderRadius: 6 }}>
           <Text>ENSINO MÉDIO COM DESENVOLVIMENTO DE SISTEMAS</Text>
         </View>
       </View>
       <View style={{ alignItems: "center" }}>
-        <Text style={{fontWeight: 'bold'}}>DADOS DA CLASSE SELECIONADA</Text>
+        <Text style={{ fontWeight: 'bold' }}>DADOS DA CLASSE SELECIONADA</Text>
         <View style={{ flexDirection: "column", backgroundColor: "white", padding: 10, borderColor: 'black', borderWidth: 2, borderRadius: 6 }}>
           <View style={styles.row}>
             <Text>RM: </Text>
@@ -58,38 +59,38 @@ export default function LoginScreen() {
         </View>
       </View>
       <View style={{ alignItems: "center" }}>
-        <Text style={{fontWeight: 'bold'}}>MENU DE NAVEGAÇÃO</Text>
-        <View style={{ flexDirection: 'row', flexWrap: 'wrap', padding: 10}}>
+        <Text style={{ fontWeight: 'bold' }}>MENU DE NAVEGAÇÃO</Text>
+        <View style={{ flexDirection: 'row', flexWrap: 'wrap', padding: 10 }}>
           <View>
             <View style={styles.button}>
               <Image source={require('../assets/images/analytics.svg')} style={{ width: 25, height: 25 }} />
-              <Text style={{color: 'white', textAlign: 'center'}}>Aulas e Faltas</Text>
+              <Text style={{ color: 'white', textAlign: 'center' }}>Aulas e Faltas</Text>
             </View>
             <View style={styles.button}>
               <Image source={require('../assets/images/msg.svg')} style={{ width: 25, height: 25 }} />
-              <Text style={{color: 'white', textAlign: 'center'}}>Mensagens</Text>
+              <Text style={{ color: 'white', textAlign: 'center' }}>Mensagens</Text>
             </View>
             <View style={styles.button}>
               <Image source={require('../assets/images/calendar.svg')} style={{ width: 25, height: 25 }} />
-              <Text style={{color: 'white', textAlign: 'center'}} onPress={() => navigation.navigate("Aulas")}>Horários das Aulas</Text> 
+              <Text style={styles.buttonText} onPress={() => navigation.navigate("aulas")}>Horários das Aulas</Text>
             </View>
             <View style={styles.button}>
               <Image source={require('../assets/images/boletim.svg')} style={{ width: 25, height: 25 }} />
-              <Text style={{color: 'white', textAlign: 'center'}}>Boletim</Text>
+              <Text style={{ color: 'white', textAlign: 'center' }}>Boletim</Text>
             </View>
           </View>
           <View>
             <View style={styles.button}>
               <Image source={require('../assets/images/entry.svg')} style={{ width: 25, height: 25 }} />
-              <Text style={{color: 'white', textAlign: 'center'}}>Código de Entrada</Text>
+              <Text style={{ color: 'white', textAlign: 'center' }}>Código de Entrada</Text>
             </View>
             <View style={styles.button}>
               <Image source={require('../assets/images/declaracao.svg')} style={{ width: 25, height: 25 }} />
-              <Text style={{color: 'white', textAlign: 'center'}} onPress={() => navigation.navigate("Declaracoes")}>Declarações</Text>
+              <Text style={styles.buttonText} onPress={() => navigation.navigate("declaracao")}>Declarações</Text>
             </View>
             <View style={styles.button}>
               <Image source={require('../assets/images/photo.svg')} style={{ width: 25, height: 25 }} />
-              <Text style={{color: 'white', textAlign: 'center'}}>Foto</Text>
+              <Text style={{ color: 'white', textAlign: 'center' }}>Foto</Text>
             </View>
           </View>
         </View>
@@ -123,5 +124,9 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     justifyContent: "center",
     height: 60
+  },
+  buttonText: {
+    color: "white",
+    textAlign: 'center'
   }
 });

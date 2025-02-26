@@ -1,7 +1,7 @@
+//Por Carlos Santos e Kauã Gomes
 import React from "react";
 import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-
 export default function LoginScreen() {
   const navigation = useNavigation();
   return (
@@ -10,7 +10,7 @@ export default function LoginScreen() {
       <Text style={styles.subtitle}>ALUNO</Text>
 
       <View style={styles.inputContainer}>
-        <View style={styles.inputBox}>
+        <View style={styles.inputBox2}>
           <Text style={styles.placeholder}>Código da Etec (ex: 031)</Text>
         </View>
         <View style={styles.helpButton}>
@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
   inputContainer: {
     flexDirection: "row",
     alignItems: "center",
+    width: 300,
   },
   inputBox: {
     backgroundColor: "white",
@@ -75,6 +76,15 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderRadius: 6,
     width: 300,
+    marginVertical: 5,
+  },
+  inputBox2: {
+    backgroundColor: "white",
+    padding: 10,
+    borderColor: "black",
+    borderWidth: 2,
+    borderRadius: 6,
+    width: 268,
     marginVertical: 5,
   },
   placeholder: {
@@ -104,7 +114,7 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: "row",
     justifyContent: "space-between",
-    width: 300,
+    width: 310,
   },
   smallButton: {
     backgroundColor: "black",
@@ -113,6 +123,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 5,
     alignItems: "center",
+    width: 404,
   },
   footer: {
     marginTop: 20,
