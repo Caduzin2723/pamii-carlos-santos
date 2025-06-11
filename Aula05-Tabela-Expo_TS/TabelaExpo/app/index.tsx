@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from 'react';
 import { SafeAreaView, StyleSheet, Text } from 'react-native';
 import Tabela from './components/Tabela';
 
